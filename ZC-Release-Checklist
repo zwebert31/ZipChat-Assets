@@ -1,0 +1,78 @@
+Login
+  +- Uninstall and reinstall make sure creating user works
+  +- Close app / logout and make sure just auth works
+
+Home 
+  +- Search
+  +- Sort by distance
+  +- Sort by activity  
+
+Create Room
+  +- Can't create with no name
+  +- Can't enter too long name
+  +- Public rooms are refreshed once the room is created
+
+Public Rooms
+  +- Only ones shown are in the area
+
+Private Rooms
+  +- Leaving 
+    +- Shows are you sure
+    +- Try cancel and then leave
+    +- Rooms are refreshed and that room is not there
+    +- Other user sees user has left toast
+  +- Try to favorite / message a left user make sure notifications are not sent
+  +- If I leave a room I should be able to send another chat request
+  - The person who I left should not be able to chat request me
+
+Requests
+  +- Accept button click
+    +- Refreshes private rooms
+    +- Removes request
+  +- Deny button 
+    +- Removes request
+  +- Shows no requests message if no more requests
+
+Notifications 
+  +- Send chat request
+    - Notification not sent if already chatting
+  +- Accept chat request
+    +- Should bring to private rooms tab if not in app
+    +- If it was the only request in the list no new requests should be displayed
+  +- Deny chat request
+    +- Clicking notification should go to homescreen
+    +- If it was the only request in the list no new requests should be displayed
+  +- Favorite message
+    +- From room and from message details
+    +- Should bring user to that message
+      +- If in pubic room they should go to message details -> public room (only if room they are in the area) -> home screen
+      +- If private room, they should go to message details -> private room -> home screen
+  +- Message notification
+    +- Private Room
+    +- Public room with subscription
+      +- Only receive if in the area
+
+Room / Socket
+  +- Room members are correctly updated in drawer
+  +- Message sending failed / retry works
+    +- Retry send
+    +- Delete message
+  +- Message works
+    +- Public/Private
+    +- Anon messages
+
+Message Details
+  +- Favoriting / removing a favorite here should update the favorite when going back to the room
+  +- Receive any GCM and update favorites accordingly
+  +- Make sure reporting messages works
+    +- Report once see success toast
+    +- Report again should say you have already favorited it
+
+User Details
+  +- Full screen for self including anon users
+  +- Chat request button has right status
+    +- If already chatting click should bring you to existing room
+
++- Try with location services off
++- Try with airplane mode on
++- No debug toasts
